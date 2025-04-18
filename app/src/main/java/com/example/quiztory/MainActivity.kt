@@ -22,6 +22,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.example.quiztory.History2
 import com.example.quiztory.ui.theme.QuiztoryTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,7 +31,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
-            val start =
+
 
             Column (
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -42,7 +43,12 @@ class MainActivity : ComponentActivity() {
                     fontWeight = FontWeight.W400,
                     fontFamily = FontFamily.Monospace)
 
-                Button(onClick = {"start"},){ }
+                Button(onClick = {"start",
+                    val start = Intent(this@MainActivity, History2::class.java)
+                    startActivity(start)}
+                    ){
+                    Text(text = "Start")
+                }
             }
         }
     }
