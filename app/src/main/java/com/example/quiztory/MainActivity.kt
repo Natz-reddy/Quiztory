@@ -32,10 +32,10 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier.fillMaxWidth()
                 .background(Color(0xFF2E3131))
             ){
-              Text(text = "WELCOME",
-                  fontSize = 45.sp,// font size
-                  fontWeight = FontWeight.Black,
-                  fontFamily = FontFamily.Monospace)
+                Text(text = "WELCOME",
+                    fontSize = 45.sp,// font size
+                    fontWeight = FontWeight.Black,
+                    fontFamily = FontFamily.Monospace)
             }
         }
     }
