@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -46,14 +47,19 @@ class MainActivity : ComponentActivity() {
                     fontWeight = FontWeight.W400,
                     fontFamily = FontFamily.Monospace)
 
-                Spacer(modifier = Modifier.height(1000.dp))
+                Spacer(modifier = Modifier.height(600.dp))
 
                 Button(onClick = {
                     val start = Intent(this@MainActivity, History2::class.java)
                     startActivity(start)}
                     ){
-                    Text(text = "Start")
+                    Text(text = "Start",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.W900,
+                        fontFamily = FontFamily.Serif
+                    )
                 }
+                 Spacer(modifier = Modifier.height(155.dp))
             }
         }
     }
