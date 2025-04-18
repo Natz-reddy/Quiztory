@@ -1,5 +1,6 @@
 package com.example.quiztory
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,6 +30,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
+            val start =
+
             Column (
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth()
@@ -38,8 +42,9 @@ class MainActivity : ComponentActivity() {
                     fontWeight = FontWeight.W400,
                     fontFamily = FontFamily.Monospace)
 
-                Button(onClick = {"start"}) { }
+                Button(onClick = {"start"},){ }
             }
         }
     }
 }
+
