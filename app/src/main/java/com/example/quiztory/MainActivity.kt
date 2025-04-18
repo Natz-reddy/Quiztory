@@ -45,7 +45,8 @@ class MainActivity : ComponentActivity() {
                 Text(text = "WELCOME",
                     fontSize = 45.sp,// font size
                     fontWeight = FontWeight.W400,
-                    fontFamily = FontFamily.Monospace)
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.Yellow)
 
                 Spacer(modifier = Modifier.height(600.dp))
 
@@ -53,7 +54,7 @@ class MainActivity : ComponentActivity() {
                     val start = Intent(this@MainActivity, History2::class.java)
                     startActivity(start)},
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0x68FF0026),
+                        containerColor =Color(0x68FF0026),
                         contentColor = Color.White
                     )
 
