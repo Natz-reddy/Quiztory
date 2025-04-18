@@ -51,8 +51,13 @@ class MainActivity : ComponentActivity() {
 
                 Button(onClick = {
                     val start = Intent(this@MainActivity, History2::class.java)
-                    startActivity(start)}
-                    ){
+                    startActivity(start)},
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0x68FF0026),
+                        contentColor = Color.White
+                    )
+
+                ){
                     Text(text = "Start",
                         fontSize = 20.sp,
                         fontWeight = FontWeight.W900,
