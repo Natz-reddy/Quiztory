@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -41,12 +42,16 @@ class MainActivity : ComponentActivity() {
             {
                 Column (
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.fillMaxWidth()
-                        .background(Color(0xFFC4B37B))
+                    verticalArrangement = Arrangement.SpaceBetween,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp)
+
                 )
 
                 {
                     Spacer(modifier = Modifier.height(30.dp))
+                    
                     Text(text = "WELCOME",
                         fontSize = 45.sp,// font size
                         fontWeight = FontWeight.ExtraBold,
