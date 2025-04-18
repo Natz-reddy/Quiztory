@@ -40,11 +40,14 @@ class MainActivity : ComponentActivity() {
             Column (
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth()
-                .background(Color(0xFF2E3131))
-            ){
+                .background(Color(0xFFC4B37B))
+            )
+
+            {
+                Spacer(modifier = Modifier.height(30.dp))
                 Text(text = "WELCOME",
                     fontSize = 45.sp,// font size
-                    fontWeight = FontWeight.W400,
+                    fontWeight = FontWeight.ExtraBold,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.Yellow)
 
