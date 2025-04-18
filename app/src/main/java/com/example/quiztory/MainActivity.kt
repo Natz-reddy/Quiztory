@@ -90,7 +90,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(bottom = 50.dp)
                             .width(200.dp)
                             .height(50.dp)
-                            .clip(RoundedCornerShape(12.dp))
+
 
                     ){
                         Text(text = "Start",
@@ -100,12 +100,6 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     Spacer(modifier = Modifier.height(35.dp))
-                    Image(
-                        painter = painterResource(id = R.drawable.ic_launcher_background1),
-                        contentDescription = "Quiztory",
-                        modifier = Modifier.size(100.dp).
-                        padding(top = 16.dp)
-                    )
                 }
 
             }
