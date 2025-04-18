@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,8 +35,10 @@ class MainActivity : ComponentActivity() {
             ){
                 Text(text = "WELCOME",
                     fontSize = 45.sp,// font size
-                    fontWeight = FontWeight.Black,
+                    fontWeight = FontWeight.W400,
                     fontFamily = FontFamily.Monospace)
+
+                Button(onClick = {"start"}) { }
             }
         }
     }
