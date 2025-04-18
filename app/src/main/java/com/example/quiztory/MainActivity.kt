@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
                     fontWeight = FontWeight.W400,
                     fontFamily = FontFamily.Monospace)
 
-                Spacer(modifier = Modifier.height(300.dp))
+                Spacer(modifier = Modifier.height(1000.dp))
 
                 Button(onClick = {
                     val start = Intent(this@MainActivity, History2::class.java)
