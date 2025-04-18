@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
@@ -59,7 +60,10 @@ class MainActivity : ComponentActivity() {
                     colors = ButtonDefaults.buttonColors(
                         containerColor =Color(0x68FF0026),
                         contentColor = Color.White
-                    )
+                    ),
+                    modifier = Modifier.padding(bottom = 100.dp)
+                       .width(200.dp)
+                      .height(50.dp)
 
                 ){
                     Text(text = "Start",
