@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -35,45 +36,51 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-
-
-
-            Column (
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.fillMaxWidth()
-                .background(Color(0xFFC4B37B))
-            )
-
+            Surface(modifier = Modifier.fillMaxSize(),
+                color= Color(0xFFC4B37B))
             {
-                Spacer(modifier = Modifier.height(30.dp))
-                Text(text = "WELCOME",
-                    fontSize = 45.sp,// font size
-                    fontWeight = FontWeight.ExtraBold,
-                    fontFamily = FontFamily.SansSerif,
-                    color = Color.Yellow)
+                Column (
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.fillMaxWidth()
+                        .background(Color(0xFFC4B37B))
+                )
 
-                Spacer(modifier = Modifier.height(600.dp))
+                {
+                    Spacer(modifier = Modifier.height(30.dp))
+                    Text(text = "WELCOME",
+                        fontSize = 45.sp,// font size
+                        fontWeight = FontWeight.ExtraBold,
+                        fontFamily = FontFamily.SansSerif,
+                        color = Color.Yellow)
 
-                Button(onClick = {
-                    val start = Intent(this@MainActivity, History2::class.java)
-                    startActivity(start)},
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor =Color(0x68FF0026),
-                        contentColor = Color.White
-                    ),
-                    modifier = Modifier.padding(bottom = 100.dp)
-                       .width(200.dp)
-                      .height(50.dp)
+                    Spacer(modifier = Modifier.height(600.dp))
 
-                ){
-                    Text(text = "Start",
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.W900,
-                        fontFamily = FontFamily.Serif
-                    )
+                    Button(onClick = {
+                        val start = Intent(this@MainActivity, History2::class.java)
+                        startActivity(start)},
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor =Color(0x68FF0026),
+                            contentColor = Color.White
+                        ),
+                        modifier = Modifier.padding(bottom = 100.dp)
+                            .width(200.dp)
+                            .height(50.dp)
+
+                    ){
+                        Text(text = "Start",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.W900,
+                            fontFamily = FontFamily.Serif
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(155.dp))
                 }
-                 Spacer(modifier = Modifier.height(155.dp))
+
             }
+
+
+
+
         }
     }
 }
