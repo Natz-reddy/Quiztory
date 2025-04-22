@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Surface(modifier = Modifier.fillMaxSize(),
-                color= Color(0xFF265BC5)
+                color= Color(0xFFD9BFEF)
             )
             {
                 Column (
