@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Quiztory</string>
     <string name="title_activity_history2">History2</string>
+    <string name="title_activity_theme1">Theme1</string>
 </resources>

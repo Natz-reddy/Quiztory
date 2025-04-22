@@ -38,15 +38,13 @@ class History2 : ComponentActivity() {
             )
             {
                 Column ( horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.SpaceBetween,
+                    verticalArrangement = Arrangement.Top,
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp)
 
                 )
                 {
-                    Spacer(modifier = Modifier.height(16.dp))
-
                     Text(text="Choose a genre",
                         fontSize = 55.sp,
                         fontWeight = FontWeight.ExtraBold,
@@ -55,6 +53,11 @@ class History2 : ComponentActivity() {
                         textAlign = TextAlign.Center
                     )
 
+Spacer(modifier = Modifier.height(60.dp))
+
+                    Button(onClick = {
+                    val start1 = Intent(this@History2, History2::class.java)
+                    }) { }
 
                 }
                 }

@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Quiztory"
         tools:targetApi="31">
         <activity
+            android:name=".Theme1"
+            android:exported="false"
+            android:label="@string/title_activity_theme1"
+            android:theme="@style/Theme.Quiztory" />
+        <activity
             android:name=".History2"
             android:exported="false"
             android:label="@string/title_activity_history2"
