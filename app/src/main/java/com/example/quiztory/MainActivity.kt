@@ -67,10 +67,10 @@ class MainActivity : ComponentActivity() {
                 )
 
                 {
-                    Spacer(modifier = Modifier.height(100.dp))
+                   Spacer(modifier = Modifier.height(90.dp))
 
                     Text(text = "QUIZTORY",
-                        fontSize = 45.sp,
+                        fontSize = 55.sp,
                         fontWeight = FontWeight.ExtraBold,
                         fontFamily = FontFamily.SansSerif,
                         color = Color(0xFFE7CC6A),
@@ -79,15 +79,24 @@ class MainActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.height(5.dp))
 
                     OutlinedTextField(value = description, onValueChange ={ description=it},
-                        placeholder = { Text(text=" Put your knowledge to the test. Answer five history questions , " +
-                                "True/ False about the world history events and figures",
-                            color = Color.DarkGray,
-                            fontSize = 25.sp,
-                            fontFamily = FontFamily.SansSerif,
-                            textAlign = TextAlign.Center)  },
+                        placeholder = { Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text(
+                                text = " Put your knowledge to the test. Answer five history questions , " +
+                                        "True/ False about the world history events and figures",
+                                color = Color.DarkGray,
+                                fontSize = 25.sp,
+                                fontFamily = FontFamily.SansSerif,
+                                textAlign = TextAlign.Center
+                            )
+
+                            Spacer(modifier = Modifier.height(4.dp))
+
+                            Text(text = "")
+                        }
+                                                                                                   },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(170.dp)
+                            .height(150.dp)
                             .padding(horizontal = 16.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
@@ -107,7 +116,7 @@ class MainActivity : ComponentActivity() {
                             contentColor = Color.White
                         ),
                         modifier = Modifier.padding(bottom = 50.dp)
-                            .width(200.dp)
+                            .width(300.dp)
                             .height(50.dp)
 
 
