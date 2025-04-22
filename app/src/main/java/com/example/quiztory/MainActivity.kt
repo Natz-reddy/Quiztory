@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
             var description by remember { mutableStateOf("") }
 
             Surface(modifier = Modifier.fillMaxSize(),
-                color= Color(0xFFD9BFEF)
+                color= Color(0xFFF5F5DC)
             )
             {
                 Column (
@@ -76,18 +76,18 @@ class MainActivity : ComponentActivity() {
                         color = Color(0xFFE7CC6A),
                         textAlign = TextAlign.Center
                     )
-                    Spacer(modifier = Modifier.height(20.dp))
+                    Spacer(modifier = Modifier.height(5.dp))
 
                     OutlinedTextField(value = description, onValueChange ={ description=it},
                         placeholder = { Text(text=" Put your knowledge to the test. Answer five history questions , " +
                                 "True/ False about the world history events and figures",
                             color = Color.DarkGray,
-                            fontSize = 20.sp,
+                            fontSize = 25.sp,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center)  },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(150.dp)
+                            .height(170.dp)
                             .padding(horizontal = 16.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
