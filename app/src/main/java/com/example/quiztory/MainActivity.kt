@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -75,15 +76,19 @@ class MainActivity : ComponentActivity() {
                         textAlign = TextAlign.Center
                     )
                     Spacer(modifier = Modifier.height(20.dp))
-                    Text(text=" Put your knowledge to the test. Answer five history questions , " +
-                            "True/ False about the world history events and figures",
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Normal,
-                        fontFamily = FontFamily.SansSerif,
-                        color = Color.White,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(
-                            horizontal = 16.dp))
+
+                    OutlinedTextField(value = description, onValueChange ={ description=it},
+                        placeholder = { Text(text=" Put your knowledge to the test. Answer five history questions , " +
+                                "True/ False about the world history events and figures",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Normal,
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.White,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(
+                                horizontal = 16.dp))})
+
+
 
                     Spacer(modifier = Modifier.height(50.dp))
 
