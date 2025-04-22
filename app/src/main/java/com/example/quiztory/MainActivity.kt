@@ -81,22 +81,26 @@ class MainActivity : ComponentActivity() {
                     OutlinedTextField(value = description, onValueChange ={ description=it},
                         placeholder = { Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = " Put your knowledge to the test. Answer five history questions , " +
-                                        "True/ False about the world history events and figures",
-                                color = Color.DarkGray,
-                                fontSize = 25.sp,
+                                text = "Welcome to Quiztory!!",
+                                color = Color(0xFFE7CC6A),
+                                fontSize = 35.sp,
                                 fontFamily = FontFamily.SansSerif,
                                 textAlign = TextAlign.Center
                             )
 
                             Spacer(modifier = Modifier.height(4.dp))
 
-                            Text(text = "")
+                            Text(text = " Put your knowledge to the test. Answer five history questions , " +
+                                    "True/ False about the world history events and figures",
+                                color = Color.DarkGray,
+                                fontSize = 20.sp,
+                                fontFamily = FontFamily.SansSerif,
+                                textAlign = TextAlign.Center)
                         }
                                                                                                    },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(150.dp)
+                            .height(190.dp)
                             .padding(horizontal = 16.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
