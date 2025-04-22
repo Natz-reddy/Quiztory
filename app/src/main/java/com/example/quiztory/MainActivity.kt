@@ -78,8 +78,11 @@ class MainActivity : ComponentActivity() {
                     )
                     Spacer(modifier = Modifier.height(5.dp))
 
-                    OutlinedTextField(value = description, onValueChange ={ description=it},
-                        placeholder = { Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    OutlinedTextField(value = "", onValueChange ={ },
+                        enabled = false,
+                        placeholder = {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally)
+                            {
                             Text(
                                 text = "Welcome to Quiztory!!",
                                 color = Color(0xFFE7CC6A),
