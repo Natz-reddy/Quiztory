@@ -73,7 +73,7 @@ class MainActivity : ComponentActivity() {
                         fontSize = 45.sp,
                         fontWeight = FontWeight.ExtraBold,
                         fontFamily = FontFamily.SansSerif,
-                        color = Color.Yellow,
+                        color = Color(0xFFE7CC6A),
                         textAlign = TextAlign.Center
                     )
                     Spacer(modifier = Modifier.height(20.dp))
@@ -103,7 +103,7 @@ class MainActivity : ComponentActivity() {
                         val start = Intent(this@MainActivity, History2::class.java)
                         startActivity(start)},
                         colors = ButtonDefaults.buttonColors(
-                            containerColor =Color(0xFFE80B0B),
+                            containerColor =Color(0xFFE7CC6A),
                             contentColor = Color.White
                         ),
                         modifier = Modifier.padding(bottom = 50.dp)
