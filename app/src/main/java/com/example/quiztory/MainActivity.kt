@@ -23,6 +23,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -79,7 +80,11 @@ class MainActivity : ComponentActivity() {
 
                     OutlinedTextField(value = description, onValueChange ={ description=it},
                         placeholder = { Text(text=" Put your knowledge to the test. Answer five history questions , " +
-                                "True/ False about the world history events and figures", color = Color.Black) })
+                                "True/ False about the world history events and figures", color = Color.Black) },
+                        colors = TextFieldDefaults.colors(
+                            focusedIndicatorColor = Color.White,
+                            unfocusedIndicatorColor = Color.White
+                        ))
 
 
 
