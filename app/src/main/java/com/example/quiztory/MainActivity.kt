@@ -82,6 +82,9 @@ class MainActivity : ComponentActivity() {
                         placeholder = { Text(text=" Put your knowledge to the test. Answer five history questions , " +
                                 "True/ False about the world history events and figures",
                             color = Color.Black,
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center)  },
                         modifier = Modifier
                             .fillMaxWidth()
