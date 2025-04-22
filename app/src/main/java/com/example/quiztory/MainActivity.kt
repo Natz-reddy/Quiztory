@@ -81,6 +81,10 @@ class MainActivity : ComponentActivity() {
                     OutlinedTextField(value = description, onValueChange ={ description=it},
                         placeholder = { Text(text=" Put your knowledge to the test. Answer five history questions , " +
                                 "True/ False about the world history events and figures", color = Color.Black) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(150.dp)
+                            .padding(horizontal = 16.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
                             unfocusedIndicatorColor = Color.White
