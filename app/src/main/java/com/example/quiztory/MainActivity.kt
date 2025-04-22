@@ -122,9 +122,10 @@ class MainActivity : ComponentActivity() {
                             containerColor =Color(0xFFE7CC6A),
                             contentColor = Color.White
                         ),
-                        modifier = Modifier.padding(bottom = 50.dp)
-                            .width(300.dp)
-                            .height(50.dp)
+                       modifier = Modifier
+                           .padding(bottom = 50.dp)
+                           .width(300.dp)
+                           .height(50.dp)
 
 
                     ){

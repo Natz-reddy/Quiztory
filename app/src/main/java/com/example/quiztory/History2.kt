@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
@@ -60,13 +61,27 @@ Spacer(modifier = Modifier.height(60.dp))
                     Button(onClick = {
                     val start1 = Intent(this@History2, Theme1::class.java)
                         startActivity(start1) },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE80B0B)), // Red color for button
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor =Color(0xFFE7CC6A),
+                            contentColor = Color.White
+                        ),
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .height(150.dp) // Make the button box taller
-                            .padding(horizontal = 16.dp) // Horizontal padding
+                            .padding(bottom = 50.dp)
+                            .width(300.dp)
+                            .height(50.dp)
                     )
-                     { }
+                     {
+                        Text(text=" Ancient History ",
+                            fontSize = 25.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.SansSerif,
+                            textAlign = TextAlign.Center
+
+
+                            )
+
+
+                     }
 
                 }
                 }
