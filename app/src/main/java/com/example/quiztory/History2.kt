@@ -67,11 +67,22 @@ Spacer(modifier = Modifier.height(60.dp))
                                 horizontalAlignment = Alignment.CenterHorizontally
                             ) {
                                 Text(text = "Ancient history",
-                                    )
+                                    color = Color(0xFFE7CC6A),
+                                    fontSize = 20.sp,
+                                    fontFamily = FontFamily.SansSerif,
+                                    textAlign = TextAlign.Center )
+
+                                Spacer(modifier = Modifier.height(20.dp))
+
+                                Text(text = "description",
+                                    color = Color.Gray,
+                                    fontSize = 20.sp,
+                                    fontFamily = FontFamily.SansSerif,
+                                    textAlign = TextAlign.Center )
 
                             }
                         }
-
+                    )
                     Button(onClick = {
                     val start1 = Intent(this@History2, Theme1::class.java)
                         startActivity(start1) },
