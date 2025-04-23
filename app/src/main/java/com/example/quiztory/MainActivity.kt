@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,9 +32,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -53,8 +56,20 @@ class MainActivity : ComponentActivity() {
 
             var description by remember { mutableStateOf("") }
 
+            Box( modifier = Modifier.fillMaxSize()){
+                Image(
+                    painter = painterResource(id = R.drawable.ic_launcher_foreground1),
+                    contentDescription = null,
+                    contentScale = ContentScale.FillBounds,
+                    modifier = Modifier.fillMaxSize().alpha(0.9f)
+                )
+            }
+
+
+
+
             Surface(modifier = Modifier.fillMaxSize(),
-                color= Color(0xFFF5F5DC)
+                color= Color.Transparent
             )
             {
                 Column (
@@ -75,8 +90,8 @@ class MainActivity : ComponentActivity() {
                         fontFamily = FontFamily.SansSerif,
                         color = Color(0xFFE7CC6A),
                         textAlign = TextAlign.Center
-                    )
-                    Spacer(modifier = Modifier.height(5.dp))
+                  )
+                  Spacer(modifier = Modifier.height(5.dp))
 
                     OutlinedTextField(value = "", onValueChange ={ },
                         enabled = false,
