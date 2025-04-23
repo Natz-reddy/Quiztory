@@ -82,18 +82,20 @@ Spacer(modifier = Modifier.height(60.dp))
                                     textAlign = TextAlign.Center )
 
                             }
+                                      },
 
 
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(190.dp)
+                                modifier = Modifier
+                                .fillMaxWidth()
+                            .height(150.dp)
                             .padding(horizontal = 16.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
                             unfocusedIndicatorColor = Color.White
                         )
                     )
+
+                    Spacer(modifier = Modifier.height(10.dp))
                     Button(onClick = {
                     val start1 = Intent(this@History2, Theme1::class.java)
                         startActivity(start1) },
