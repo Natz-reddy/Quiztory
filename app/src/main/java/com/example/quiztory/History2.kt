@@ -67,7 +67,7 @@ Spacer(modifier = Modifier.height(60.dp))
                             Column (
                                 horizontalAlignment = Alignment.CenterHorizontally
                             ) {
-                                Text(text = "Ancient history",
+                                Text(text = "South African history",
                                     color = Color(0xFFE7CC6A),
                                     fontSize = 20.sp,
                                     fontFamily = FontFamily.SansSerif,
@@ -97,8 +97,8 @@ Spacer(modifier = Modifier.height(60.dp))
 
                     Spacer(modifier = Modifier.height(10.dp))
                     Button(onClick = {
-                    val start1 = Intent(this@History2, Theme1::class.java)
-                        startActivity(start1) },
+                    val start2 = Intent(this@History2, Theme1::class.java)
+                        startActivity(start2) },
                         colors = ButtonDefaults.buttonColors(
                             containerColor =Color(0xFFE7CC6A),
                             contentColor = Color.White
@@ -120,7 +120,72 @@ Spacer(modifier = Modifier.height(60.dp))
                      }
 
                 }
+
+                Spacer(modifier =Modifier.height(16.dp))
+
+
+                OutlinedTextField(value = "", onValueChange ={},
+                    enabled = false,
+                    placeholder = {
+                        Column (
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(text = "Ancient history",
+                                color = Color(0xFFE7CC6A),
+                                fontSize = 20.sp,
+                                fontFamily = FontFamily.SansSerif,
+                                textAlign = TextAlign.Center )
+
+                            Spacer(modifier = Modifier.height(20.dp))
+
+                            Text(text = "description",
+                                color = Color.Gray,
+                                fontSize = 20.sp,
+                                fontFamily = FontFamily.SansSerif,
+                                textAlign = TextAlign.Center )
+
+                        }
+                    },
+
+
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(150.dp)
+                        .padding(horizontal = 16.dp),
+                    colors = TextFieldDefaults.colors(
+                        focusedIndicatorColor = Color.White,
+                        unfocusedIndicatorColor = Color.White
+                    )
+                )
+
+                Spacer(modifier = Modifier.height(10.dp))
+                Button(onClick = {
+                    val start1 = Intent(this@History2, Theme1::class.java)
+                    startActivity(start1) },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor =Color(0xFFE7CC6A),
+                        contentColor = Color.White
+                    ),
+                    modifier = Modifier
+                        .padding(bottom = 50.dp)
+                        .width(300.dp)
+                        .height(50.dp)
+                )
+                {
+                    Text(text=" Ancient History ",
+                        fontSize = 25.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontFamily = FontFamily.SansSerif,
+                        textAlign = TextAlign.Center
+                    )
+
+
+                }
+
+            }
+
+
+
                 }
         }
-    }
 }
