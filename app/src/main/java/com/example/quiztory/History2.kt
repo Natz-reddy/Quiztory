@@ -95,7 +95,7 @@ Spacer(modifier = Modifier.height(60.dp))
                         )
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
 
                     Button(onClick = {
                     val start1 = Intent(this@History2, Theme1::class.java)
@@ -111,7 +111,7 @@ Spacer(modifier = Modifier.height(60.dp))
                     )
                      {
                         Text(text=" Ancient History",
-                            fontSize = 25.sp,
+                            fontSize = 20.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center
@@ -120,7 +120,7 @@ Spacer(modifier = Modifier.height(60.dp))
 
                      }
 
-                    Spacer(modifier =Modifier.height(20.dp))
+                    Spacer(modifier =Modifier.height(5.dp))
 
 
                     OutlinedTextField(value = "", onValueChange ={},
@@ -135,7 +135,7 @@ Spacer(modifier = Modifier.height(60.dp))
                                     fontFamily = FontFamily.SansSerif,
                                     textAlign = TextAlign.Center )
 
-                                Spacer(modifier = Modifier.height(20.dp))
+                                Spacer(modifier = Modifier.height(16.dp))
 
                                 Text(text = "description",
                                     color = Color.Gray,
@@ -157,7 +157,7 @@ Spacer(modifier = Modifier.height(60.dp))
                         )
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
 
                     Button(onClick = {
                         val start2 = Intent(this@History2, Theme2::class.java)
@@ -173,7 +173,7 @@ Spacer(modifier = Modifier.height(60.dp))
                     )
                     {
                         Text(text=" South African history ",
-                            fontSize = 25.sp,
+                            fontSize = 20.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center
@@ -182,7 +182,7 @@ Spacer(modifier = Modifier.height(60.dp))
 
                     }
 
-                    Spacer(modifier =Modifier.height(20.dp))
+                    Spacer(modifier =Modifier.height(5.dp))
 
 
                     OutlinedTextField(value = "", onValueChange ={},
@@ -197,11 +197,11 @@ Spacer(modifier = Modifier.height(60.dp))
                                     fontFamily = FontFamily.SansSerif,
                                     textAlign = TextAlign.Center )
 
-                                Spacer(modifier = Modifier.height(20.dp))
+                                Spacer(modifier = Modifier.height(8.dp))
 
                                 Text(text = "description",
                                     color = Color.Gray,
-                                    fontSize = 20.sp,
+                                    fontSize = 16.sp,
                                     fontFamily = FontFamily.SansSerif,
                                     textAlign = TextAlign.Center )
 
@@ -219,7 +219,7 @@ Spacer(modifier = Modifier.height(60.dp))
                         )
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
 
                     Button(onClick = {
                         val start3 = Intent(this@History2, Theme3::class.java)
@@ -235,7 +235,7 @@ Spacer(modifier = Modifier.height(60.dp))
                     )
                     {
                         Text(text=" Greek history ",
-                            fontSize = 25.sp,
+                            fontSize = 20.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center
