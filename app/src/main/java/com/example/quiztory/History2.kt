@@ -15,11 +15,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
@@ -58,6 +60,18 @@ class History2 : ComponentActivity() {
 
 Spacer(modifier = Modifier.height(60.dp))
 
+                    OutlinedTextField(value = "", onValueChange ={},
+                        enabled = false,
+                        placeholder = {
+                            Column (
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Text(text = "Ancient history",
+                                    )
+
+                            }
+                        }
+
                     Button(onClick = {
                     val start1 = Intent(this@History2, Theme1::class.java)
                         startActivity(start1) },
@@ -76,9 +90,7 @@ Spacer(modifier = Modifier.height(60.dp))
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center
-
-
-                            )
+                        )
 
 
                      }

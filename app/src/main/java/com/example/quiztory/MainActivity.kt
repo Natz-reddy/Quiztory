@@ -83,13 +83,14 @@ class MainActivity : ComponentActivity() {
                         placeholder = {
                             Column(horizontalAlignment = Alignment.CenterHorizontally)
                             {
-                            Text(
-                                text = "Welcome to Quiztory!!",
+
+
+
+                            Text(text = "welcomew to Quiztory",
                                 color = Color(0xFFE7CC6A),
-                                fontSize = 35.sp,
+                                fontSize = 20.sp,
                                 fontFamily = FontFamily.SansSerif,
-                                textAlign = TextAlign.Center
-                            )
+                                textAlign = TextAlign.Center)
 
                             Spacer(modifier = Modifier.height(4.dp))
 
