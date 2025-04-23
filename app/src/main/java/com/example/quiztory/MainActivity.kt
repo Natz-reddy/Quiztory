@@ -101,7 +101,7 @@ class MainActivity : ComponentActivity() {
                                 fontFamily = FontFamily.SansSerif,
                                 textAlign = TextAlign.Center)
                         }
-                                                                                                   },
+                                      },
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(190.dp)

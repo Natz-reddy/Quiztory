@@ -19,6 +19,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.BiasAlignment
@@ -81,7 +82,17 @@ Spacer(modifier = Modifier.height(60.dp))
                                     textAlign = TextAlign.Center )
 
                             }
-                        }
+
+
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(190.dp)
+                            .padding(horizontal = 16.dp),
+                        colors = TextFieldDefaults.colors(
+                            focusedIndicatorColor = Color.White,
+                            unfocusedIndicatorColor = Color.White
+                        )
                     )
                     Button(onClick = {
                     val start1 = Intent(this@History2, Theme1::class.java)
