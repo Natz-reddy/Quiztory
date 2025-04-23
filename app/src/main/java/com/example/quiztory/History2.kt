@@ -87,8 +87,8 @@ Spacer(modifier = Modifier.height(60.dp))
 
                                 modifier = Modifier
                                 .fillMaxWidth()
-                            .height(150.dp)
-                            .padding(horizontal = 16.dp),
+                            .height(120.dp)
+                            .padding(horizontal = 8.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
                             unfocusedIndicatorColor = Color.White
@@ -149,8 +149,8 @@ Spacer(modifier = Modifier.height(60.dp))
 
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(150.dp)
-                            .padding(horizontal = 16.dp),
+                            .height(120.dp)
+                            .padding(horizontal = 8.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
                             unfocusedIndicatorColor = Color.White
@@ -211,8 +211,8 @@ Spacer(modifier = Modifier.height(60.dp))
 
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(150.dp)
-                            .padding(horizontal = 16.dp),
+                            .height(120.dp)
+                            .padding(horizontal = 8.dp),
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.White,
                             unfocusedIndicatorColor = Color.White
@@ -234,7 +234,7 @@ Spacer(modifier = Modifier.height(60.dp))
                             .height(50.dp)
                     )
                     {
-                        Text(text=" South African history ",
+                        Text(text=" Greek history ",
                             fontSize = 25.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
@@ -244,18 +244,10 @@ Spacer(modifier = Modifier.height(60.dp))
 
                     }
 
-
-
-
-
                 }
-
-
 
             }
 
-
-
-                }
         }
+    }
 }

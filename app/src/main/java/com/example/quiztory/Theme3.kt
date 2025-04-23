@@ -18,7 +18,7 @@ class Theme3 : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            
+
         }
     }
 }
