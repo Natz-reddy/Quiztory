@@ -1,5 +1,6 @@
 package com.example.quiztory
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -22,7 +23,9 @@ class Theme1 : ComponentActivity() {
         "Hammurabi was an Egyptian king.",
         "Cleopatra was the last Pharaoh of Egypt."
     )
-
+private val answers= arrayOf(
+    true,true,false,false,true
+)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
