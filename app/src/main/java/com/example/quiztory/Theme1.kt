@@ -14,6 +14,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.quiztory.ui.theme.QuiztoryTheme
 
 class Theme1 : ComponentActivity() {
+
+    private val questions = arrayOf(
+        "The Great Pyramid was built in 2560 BC.",
+        "Ancient Romans used concrete.",
+        "The Hanging Gardens were in Athens.",
+        "Hammurabi was an Egyptian king.",
+        "Cleopatra was the last Pharaoh of Egypt."
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
