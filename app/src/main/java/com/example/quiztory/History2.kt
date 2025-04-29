@@ -106,6 +106,37 @@ class History2 : ComponentActivity() {
 
                     Spacer(modifier = Modifier.height(60.dp))
 
+
+                    OutlinedTextField ( value = "", onValueChange = {},
+                        enabled = false,
+                        placeholder = {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally)
+                            {
+                                Text(
+                                    text = quiz_questions[questioncount],
+                                    fontSize = 20.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    textAlign = TextAlign.Center,
+                                    color = Color.Black
+                                )
+                            }
+
+
+                        },
+                        modifier = Modifier
+                            .width(3500.dp)
+                            .height(150.dp)
+                            .padding(horizontal = 10.dp),
+                        colors = TextFieldDefaults.colors(
+                            focusedIndicatorColor = Color.White,
+                            unfocusedIndicatorColor = Color.White
+                    )
+                    )
+
+
+
+                    Spacer(modifier = Modifier.height(40.dp))
+
                     Row {
                         Button(onClick = {
                             isCorrect= if (answers[questioncount] )"Correct" else "incorrect"
@@ -122,7 +153,13 @@ class History2 : ComponentActivity() {
 
                     }
 
+                    Spacer(modifier = Modifier.height(15.dp))
+
                     Text(text = isCorrect,
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontFamily = FontFamily.SansSerif,
+                        textAlign = TextAlign.Center,
                         color = if (isCorrect=="Correct") Color.Green
                     else
                     Color.Red
@@ -133,7 +170,10 @@ class History2 : ComponentActivity() {
                             questioncount++
                             isCorrect=""
                         }
-                    }) { }
+                    }) {
+
+                        Text(text="next question")
+                    }
 
                 }
 
