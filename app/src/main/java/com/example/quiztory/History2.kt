@@ -140,7 +140,11 @@ class History2 : ComponentActivity() {
                     Row {
                         Button(onClick = {
                             isCorrect= if (answers[questioncount] )"Correct" else "incorrect"
-                        }) {
+                        },
+                            colors = ButtonDefaults.buttonColors(
+                            containerColor =Color(0xFFE7CC6A),
+                            contentColor = Color.White)
+                        ) {
                             Text(text = "True")
                         }
 
