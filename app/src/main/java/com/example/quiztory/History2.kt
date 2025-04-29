@@ -120,7 +120,20 @@ class History2 : ComponentActivity() {
                         }
 
 
+                    }
 
+                    Text(text = isCorrect,
+                        color = if (isCorrect=="Correct") Color.Green
+                    else
+                    Color.Red
+                    )
+
+                    Button(onClick = {
+                        if (questioncount < quiz_questions.size - 1 ){
+                            questioncount++
+                            isCorrect=""
+                        }
+                    }) { }
 
                 }
 
