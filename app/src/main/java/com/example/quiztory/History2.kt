@@ -49,6 +49,10 @@ class History2 : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
+            data class Question(val text: String, val answer: Boolean)
+
+
+
             val quiz_questions = arrayOf(
                 "Nelson Mandela was imprisoned for 27 years before becoming South Africa's first Black president",
                 "The Great Trek was a movement of Afrikaans-speaking settlers into the interior of South Africa to escape British rule in the 1830s.",
