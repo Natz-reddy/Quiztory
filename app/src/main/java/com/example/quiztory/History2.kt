@@ -72,7 +72,7 @@ class History2 : ComponentActivity() {
 
 
 
-            Box( modifier = Modifier.fillMaxSize()){
+            Box(modifier = Modifier.fillMaxSize()) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_launcher_foreground1),
                     contentDescription = null,
@@ -86,7 +86,8 @@ class History2 : ComponentActivity() {
                 color = Color.Transparent
             )
             {
-                Column ( horizontalAlignment = Alignment.CenterHorizontally,
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Top,
                     modifier = Modifier
                         .fillMaxSize()
