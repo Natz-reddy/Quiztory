@@ -9,6 +9,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,6 +24,10 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
@@ -43,6 +48,26 @@ class History2 : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+
+            val quiz_questions = arrayOf(
+                "Nelson Mandela was imprisoned for 27 years before becoming South Africa's first Black president",
+                "The Great Trek was a movement of Afrikaans-speaking settlers into the interior of South Africa to escape British rule in the 1830s.",
+                "The Soweto Uprising of 1976 was a protest against the forced teaching of Afrikaans in Black schools",
+                "The Union of South Africa was formed in 1910, uniting the British Cape Colony and the Boer Republics under British rule.",
+                "The Anglo-Zulu War (1879) ended with a decisive Zulu victory, preventing British colonization of Natal."
+
+            )
+
+            val answers = arrayOf(
+                false,true,true,true,false
+                ,true
+            )
+            
+            var questioncount by remember { mutableStateOf(0) }
+            var isCorrect by remember { mutableStateOf<Boolean?>(null) }
+
+
+
 
             Box( modifier = Modifier.fillMaxSize()){
                 Image(
@@ -66,7 +91,7 @@ class History2 : ComponentActivity() {
 
                 )
                 {
-                    Text(text="Choose a genre",
+                    Text(text=" Choose the correct answer ",
                         fontSize = 55.sp,
                         fontWeight = FontWeight.ExtraBold,
                         fontFamily = FontFamily.SansSerif,
@@ -76,188 +101,17 @@ class History2 : ComponentActivity() {
 
 Spacer(modifier = Modifier.height(60.dp))
 
-                    OutlinedTextField(value = "", onValueChange ={},
-                        enabled = false,
-                        placeholder = {
-                            Column (
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text(text = " Ancient history",
-                                    color = Color(0xFFE7CC6A),
-                                    fontSize = 20.sp,
-                                    fontFamily = FontFamily.SansSerif,
-                                    textAlign = TextAlign.Center )
+                    Row {
+                        Button(onClick = {isCorrect= answers[questioncount].}) {
+                            Text(text="True")
+                        }
 
-                                Spacer(modifier = Modifier.height(20.dp))
-
-                                Text(text = "description",
-                                    color = Color.Gray,
-                                    fontSize = 20.sp,
-                                    fontFamily = FontFamily.SansSerif,
-                                    textAlign = TextAlign.Center )
-
-                            }
-                                      },
-
-
-                                modifier = Modifier
-                                .fillMaxWidth()
-                            .height(120.dp)
-                            .padding(horizontal = 8.dp),
-                        colors = TextFieldDefaults.colors(
-                            focusedIndicatorColor = Color.White,
-                            unfocusedIndicatorColor = Color.White
-                        )
-                    )
-
-                    Spacer(modifier = Modifier.height(4.dp))
-
-                    Button(onClick = {
-                    val start1 = Intent(this@History2, Theme1::class.java)
-                        startActivity(start1) },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor =Color(0xFFE7CC6A),
-                            contentColor = Color.White
-                        ),
-                        modifier = Modifier
-                            .padding(bottom = 50.dp)
-                            .width(300.dp)
-                            .height(50.dp)
-                    )
-                     {
-                        Text(text=" Ancient History",
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontFamily = FontFamily.SansSerif,
-                            textAlign = TextAlign.Center
-                        )
-
-
-                     }
-
-                    Spacer(modifier =Modifier.height(5.dp))
-
-
-                    OutlinedTextField(value = "", onValueChange ={},
-                        enabled = false,
-                        placeholder = {
-                            Column (
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text(text = "South African history",
-                                    color = Color(0xFFE7CC6A),
-                                    fontSize = 20.sp,
-                                    fontFamily = FontFamily.SansSerif,
-                                    textAlign = TextAlign.Center )
-
-                                Spacer(modifier = Modifier.height(16.dp))
-
-                                Text(text = "description",
-                                    color = Color.Gray,
-                                    fontSize = 20.sp,
-                                    fontFamily = FontFamily.SansSerif,
-                                    textAlign = TextAlign.Center )
-
-                            }
-                        },
-
-
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(120.dp)
-                            .padding(horizontal = 8.dp),
-                        colors = TextFieldDefaults.colors(
-                            focusedIndicatorColor = Color.White,
-                            unfocusedIndicatorColor = Color.White
-                        )
-                    )
-
-                    Spacer(modifier = Modifier.height(4.dp))
-
-                    Button(onClick = {
-                        val start2 = Intent(this@History2, Theme2::class.java)
-                        startActivity(start2) },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor =Color(0xFFE7CC6A),
-                            contentColor = Color.White
-                        ),
-                        modifier = Modifier
-                            .padding(bottom = 50.dp)
-                            .width(300.dp)
-                            .height(50.dp)
-                    )
-                    {
-                        Text(text=" South African history ",
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontFamily = FontFamily.SansSerif,
-                            textAlign = TextAlign.Center
-                        )
-
-
+                        Button(onClick = {isCorrect= answers[questioncount]}) {
+                            Text(text="False")
                     }
 
-                    Spacer(modifier =Modifier.height(5.dp))
 
 
-                    OutlinedTextField(value = "", onValueChange ={},
-                        enabled = false,
-                        placeholder = {
-                            Column (
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text(text = "Greek",
-                                    color = Color(0xFFE7CC6A),
-                                    fontSize = 20.sp,
-                                    fontFamily = FontFamily.SansSerif,
-                                    textAlign = TextAlign.Center )
-
-                                Spacer(modifier = Modifier.height(8.dp))
-
-                                Text(text = "description",
-                                    color = Color.Gray,
-                                    fontSize = 16.sp,
-                                    fontFamily = FontFamily.SansSerif,
-                                    textAlign = TextAlign.Center )
-
-                            }
-                        },
-
-
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(120.dp)
-                            .padding(horizontal = 8.dp),
-                        colors = TextFieldDefaults.colors(
-                            focusedIndicatorColor = Color.White,
-                            unfocusedIndicatorColor = Color.White
-                        )
-                    )
-
-                    Spacer(modifier = Modifier.height(4.dp))
-
-                    Button(onClick = {
-                        val start3 = Intent(this@History2, Theme3::class.java)
-                        startActivity(start3) },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor =Color(0xFFE7CC6A),
-                            contentColor = Color.White
-                        ),
-                        modifier = Modifier
-                            .padding(bottom = 50.dp)
-                            .width(300.dp)
-                            .height(50.dp)
-                    )
-                    {
-                        Text(text=" Greek history ",
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontFamily = FontFamily.SansSerif,
-                            textAlign = TextAlign.Center
-                        )
-
-
-                    }
 
                 }
 
