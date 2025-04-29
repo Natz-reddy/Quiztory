@@ -62,9 +62,8 @@ class History2 : ComponentActivity() {
 
             )
 
-            val answers = arrayOf(
-                false,true,true,true,false
-                ,true
+            val answers = booleanArrayOf(
+                false, true, true, true, false, true
             )
             
             var questioncount by remember { mutableStateOf(0) }
