@@ -138,7 +138,6 @@ class History2 : ComponentActivity() {
                 }
 
             }
-
         }
     }
 }
