@@ -95,7 +95,8 @@ class History2 : ComponentActivity() {
 
                 )
                 {
-                    Text(text=" Choose the correct answer ",
+                    Text(
+                        text = " Choose the correct answer ",
                         fontSize = 55.sp,
                         fontWeight = FontWeight.ExtraBold,
                         fontFamily = FontFamily.SansSerif,
@@ -103,7 +104,7 @@ class History2 : ComponentActivity() {
                         textAlign = TextAlign.Center
                     )
 
-Spacer(modifier = Modifier.height(60.dp))
+                    Spacer(modifier = Modifier.height(60.dp))
 
                     Row {
                         Button(onClick = {isCorrect= answers[questioncount].}) {
