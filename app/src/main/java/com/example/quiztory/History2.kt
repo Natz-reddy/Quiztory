@@ -148,9 +148,15 @@ class History2 : ComponentActivity() {
                             Text(text = "True")
                         }
 
+                        Spacer(modifier = Modifier.width(30.dp))
+
                         Button(onClick = {
-                            isCorrect= if (!answers[questioncount] )"Correct" else "incorrect"
-                        }) {
+                            isCorrect= if (!answers[questioncount] )"Correct" else "Incorrect"
+                        },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor =Color(0xFFE7CC6A),
+                                contentColor = Color.White)
+                        ) {
                             Text(text = "False")
                         }
 
