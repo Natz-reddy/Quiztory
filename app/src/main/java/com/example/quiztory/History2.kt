@@ -107,8 +107,10 @@ class History2 : ComponentActivity() {
                     Spacer(modifier = Modifier.height(60.dp))
 
                     Row {
-                        Button(onClick = {isCorrect= answers[questioncount].}) {
-                            Text(text="True")
+                        Button(onClick = {
+                            isCorrect= if (answers[questioncount] )"Correct" else "incorrect"
+                        }) {
+                            Text(text = "True")
                         }
 
                         Button(onClick = {isCorrect= answers[questioncount]}) {
