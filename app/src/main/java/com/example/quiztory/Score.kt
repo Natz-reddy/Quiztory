@@ -18,7 +18,7 @@ class Score : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            
+
         }
     }
 }
