@@ -113,9 +113,11 @@ class History2 : ComponentActivity() {
                             Text(text = "True")
                         }
 
-                        Button(onClick = {isCorrect= answers[questioncount]}) {
-                            Text(text="False")
-                    }
+                        Button(onClick = {
+                            isCorrect= if (!answers[questioncount] )"Correct" else "incorrect"
+                        }) {
+                            Text(text = "False")
+                        }
 
 
 
