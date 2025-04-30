@@ -5,4 +5,5 @@
     <string name="title_activity_theme2">Theme2</string>
     <string name="title_activity_theme3">Theme3</string>
     <string name="title_activity_score">Score</string>
+    <string name="title_activity_review">Review</string>
 </resources>
