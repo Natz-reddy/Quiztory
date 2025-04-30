@@ -87,17 +87,12 @@ class History2 : ComponentActivity() {
                     color = Color.Transparent
                 )
                 {
-                    Text(
-                        text = " Choose the correct answer ",
-                        fontSize = 55.sp,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontFamily = FontFamily.SansSerif,
-                        color = Color(0xFFE7CC6A),
-                        textAlign = TextAlign.Center
-                    )
-
-                    Spacer(modifier = Modifier.height(60.dp))
-
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Top,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(16.dp)
 
                     OutlinedTextField ( value = "", onValueChange = {},
                         enabled = false,
