@@ -78,6 +78,12 @@ if (scorescreen){
             .padding(16.dp)
 
     ) {
+        Text(text= "Quiz Is Finished",
+            fontSize = 30.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF3E2723))
+
+        Spacer(modifier = Modifier.height(20.dp))
 
     }
 }
