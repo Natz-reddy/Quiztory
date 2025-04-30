@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -44,19 +45,27 @@ class Review : ComponentActivity() {
                         bottom = 16.dp
                     )
                 )
+                Spacer(modifier = Modifier.height(10.dp))
 
                 for (i in quiz_questions.indices){
                     val question = quiz_questions[i]
                     val answer = answers[i]
 
                     Text(text= "Question Number${i + 1}:$question",
-                        fontSize = 20.sp)
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Black
+                    )
 
                     Text(text = "Answer: ${if (answer) "True" else "False"}",
                         fontSize = 16.sp)
 
-                    Spacer(modifier = Modifier.height(16.dp))
+
                 }
+                Spacer(modifier = Modifier.height(16.dp))
+
+
+
             }
 
 
