@@ -85,6 +85,11 @@ if (scorescreen){
 
         Spacer(modifier = Modifier.height(20.dp))
 
+        Text(text="your score is $score out of ${quiz_questions.size}",
+            fontSize = 24.sp,
+            color = Color.Black
+        )
+
     }
 }
 
