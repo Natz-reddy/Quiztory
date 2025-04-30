@@ -155,20 +155,18 @@ class History2 : ComponentActivity() {
                                     containerColor = Color(0xFFE7CC6A),
                                     contentColor = Color.White
                                 )
+                            ) {
+                                Text(text = "True")
                             }
 
+                            Spacer(modifier = Modifier.width(30.dp))
 
-                        },
-                        modifier = Modifier
-                            .width(3500.dp)
-                            .height(150.dp)
-                            .padding(horizontal = 10.dp),
-                        colors = TextFieldDefaults.colors(
-                            focusedIndicatorColor = Color.White,
-                            unfocusedIndicatorColor = Color.White
-                    )
-                    )
-
+                            Button(
+                                onClick = {
+                                    if (!answers[questioncount]) {
+                                        isCorrect = "Correct"
+                                        score++
+                                    } else {
 
 
                     Spacer(modifier = Modifier.height(40.dp))
