@@ -197,15 +197,14 @@ class History2 : ComponentActivity() {
                                 Color.Red
                         )
 
-                    Text(text = isCorrect,
-                        fontSize = 30.sp,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontFamily = FontFamily.SansSerif,
-                        textAlign = TextAlign.Center,
-                        color = if (isCorrect=="Correct") Color.Green
-                    else
-                    Color.Red
-                    )
+                        Button(onClick = {
+                            if (questioncount < quiz_questions.size - 1) {
+                                questioncount++
+                                isCorrect = ""
+                            } else {
+                                scorescreen = true
+                            }
+                        }) {
 
                     Button(onClick = {
                         if (questioncount < quiz_questions.size - 1 ){
