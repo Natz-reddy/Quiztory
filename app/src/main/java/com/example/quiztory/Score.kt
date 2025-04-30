@@ -1,5 +1,6 @@
 package com.example.quiztory
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -82,6 +83,16 @@ Spacer(modifier = Modifier.height(30.dp))
 
                     Button(onClick = {}) {
                         Text(text = "review answers")
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    Button(onClick = {
+                        val playagain = Intent(this@Score, History2::class.java)
+                        startActivity(playagain)
+                        finish()
+                    }) {
+                        Text(text = "Play again")
                     }
 
                     Spacer(modifier = Modifier.height(16.dp))
