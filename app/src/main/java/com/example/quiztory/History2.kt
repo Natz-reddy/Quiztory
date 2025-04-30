@@ -206,10 +206,7 @@ class History2 : ComponentActivity() {
                             }
                         }) {
 
-                    Button(onClick = {
-                        if (questioncount < quiz_questions.size - 1 ){
-                            questioncount++
-                            isCorrect=""
+                            Text(text = "next question")
                         }
 
                     }
