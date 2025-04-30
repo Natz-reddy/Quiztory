@@ -69,6 +69,23 @@ class History2 : ComponentActivity() {
             var reviewscreen by remember { mutableStateOf(false) }
 
 
+if (scorescreen){
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top,
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+
+    ) {
+
+    }
+}
+
+
+
+
+
 
 
             Box(modifier = Modifier.fillMaxSize()) {
