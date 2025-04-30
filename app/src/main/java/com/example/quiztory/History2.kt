@@ -71,7 +71,7 @@ class History2 : ComponentActivity() {
 
 
 
-            if (!scorescreen) {
+
 
                 Box(modifier = Modifier.fillMaxSize()) {
                     Image(
@@ -202,7 +202,10 @@ class History2 : ComponentActivity() {
                                 questioncount++
                                 isCorrect = ""
                             } else {
-                                scorescreen = true
+                                val score1 = Intent(this@History2, Score::class.java)
+                                score1.putExtra("score", score)
+                                startActivity(score1)
+                                finish()
                             }
                         }) {
 
@@ -215,4 +218,4 @@ class History2 : ComponentActivity() {
             }
         }
     }
-}
+
