@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -77,7 +78,19 @@ class Score : ComponentActivity() {
                         color = if (score >= 3) Color.Green else Color.Red
                     )
 
+Spacer(modifier = Modifier.height(30.dp))
 
+                    Button(onClick = {}) {
+                        Text(text = "review answers")
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    Button(onClick = {
+                        finishAffinity()
+                    }) {
+                        Text("Exit")
+                    }
 
                 }
 
