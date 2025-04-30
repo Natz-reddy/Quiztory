@@ -19,6 +19,9 @@ class Score : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
+            val score = intent.getIntExtra("score",0)
+            val total = intent.getIntExtra("total", 5)
+
         }
     }
 }
