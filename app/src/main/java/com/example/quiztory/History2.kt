@@ -65,6 +65,8 @@ class History2 : ComponentActivity() {
             var questioncount by remember { mutableStateOf(0) }
             var isCorrect by remember { mutableStateOf("") }
             var score by remember { mutableStateOf(0) }
+            var scorescreen by remember { mutableStateOf(false) }
+            var reviewscreen by remember { mutableStateOf(false) }
 
 
 
