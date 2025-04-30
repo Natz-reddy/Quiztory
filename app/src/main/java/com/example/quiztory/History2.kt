@@ -94,17 +94,66 @@ class History2 : ComponentActivity() {
                             .fillMaxSize()
                             .padding(16.dp)
 
-                    OutlinedTextField ( value = "", onValueChange = {},
-                        enabled = false,
-                        placeholder = {
-                            Column(horizontalAlignment = Alignment.CenterHorizontally)
-                            {
-                                Text(
-                                    text = quiz_questions[questioncount],
-                                    fontSize = 20.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    textAlign = TextAlign.Center,
-                                    color = Color.Black
+                    )
+                    {
+                        Text(
+                            text = " Choose the correct answer ",
+                            fontSize = 55.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color(0xFFE7CC6A),
+                            textAlign = TextAlign.Center
+                        )
+
+                        Spacer(modifier = Modifier.height(60.dp))
+
+
+                        OutlinedTextField(
+                            value = "", onValueChange = {},
+                            enabled = false,
+                            placeholder = {
+                                Column(horizontalAlignment = Alignment.CenterHorizontally)
+                                {
+                                    Text(
+                                        text = quiz_questions[questioncount],
+                                        fontSize = 20.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        textAlign = TextAlign.Center,
+                                        color = Color.Black
+                                    )
+                                }
+
+
+                            },
+                            modifier = Modifier
+                                .width(3500.dp)
+                                .height(150.dp)
+                                .padding(horizontal = 10.dp),
+                            colors = TextFieldDefaults.colors(
+                                focusedIndicatorColor = Color.White,
+                                unfocusedIndicatorColor = Color.White
+                            )
+                        )
+
+
+
+                        Spacer(modifier = Modifier.height(40.dp))
+
+                        Row {
+                            Button(
+                                onClick = {
+                                    if (answers[questioncount]) {
+                                        isCorrect = "Correct"
+                                        score++
+                                    } else {
+                                        isCorrect = "Incorrect"
+                                    }
+
+
+                                },
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = Color(0xFFE7CC6A),
+                                    contentColor = Color.White
                                 )
                             }
 
