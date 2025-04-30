@@ -181,22 +181,21 @@ class History2 : ComponentActivity() {
                                 Text(text = "False")
                             }
 
-                        Spacer(modifier = Modifier.width(30.dp))
 
-                        Button(onClick = {
-                            isCorrect= if (!answers[questioncount] )"Correct" else "Incorrect"
-                        },
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor =Color(0xFFE7CC6A),
-                                contentColor = Color.White)
-                        ) {
-                            Text(text = "False")
                         }
 
+                        Spacer(modifier = Modifier.height(15.dp))
 
-                    }
-
-                    Spacer(modifier = Modifier.height(15.dp))
+                        Text(
+                            text = isCorrect,
+                            fontSize = 30.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontFamily = FontFamily.SansSerif,
+                            textAlign = TextAlign.Center,
+                            color = if (isCorrect == "Correct") Color.Green
+                            else
+                                Color.Red
+                        )
 
                     Text(text = isCorrect,
                         fontSize = 30.sp,
