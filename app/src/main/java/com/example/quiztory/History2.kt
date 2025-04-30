@@ -168,19 +168,18 @@ class History2 : ComponentActivity() {
                                         score++
                                     } else {
 
+                                        isCorrect = "Incorrect"
+                                    }
 
-                    Spacer(modifier = Modifier.height(40.dp))
+                                },
 
-                    Row {
-                        Button(onClick = {
-                            isCorrect= if (answers[questioncount] )"Correct" else "incorrect"
-                        },
-                            colors = ButtonDefaults.buttonColors(
-                            containerColor =Color(0xFFE7CC6A),
-                            contentColor = Color.White)
-                        ) {
-                            Text(text = "True")
-                        }
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = Color(0xFFE7CC6A),
+                                    contentColor = Color.White
+                                )
+                            ) {
+                                Text(text = "False")
+                            }
 
                         Spacer(modifier = Modifier.width(30.dp))
 
