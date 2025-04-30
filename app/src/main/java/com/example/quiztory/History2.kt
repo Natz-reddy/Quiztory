@@ -71,9 +71,20 @@ class History2 : ComponentActivity() {
 
 
 
-        Spacer(modifier = Modifier.height(20.dp))
+            if (!scorescreen) {
 
+                Box(modifier = Modifier.fillMaxSize()) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ic_launcher_foreground1),
+                        contentDescription = null,
+                        contentScale = ContentScale.FillBounds,
+                        modifier = Modifier.fillMaxSize().alpha(0.9f)
+                    )
+                }
 
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = Color.Transparent
                 )
                 {
                     Text(
