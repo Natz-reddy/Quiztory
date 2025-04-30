@@ -69,68 +69,10 @@ class History2 : ComponentActivity() {
             var reviewscreen by remember { mutableStateOf(false) }
 
 
-if (scorescreen){
-    Column (
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Top,
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
 
-    ) {
-        Text(text= "Quiz Is Finished",
-            fontSize = 30.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color(0xFF3E2723))
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text="your score is $score out of ${quiz_questions.size}",
-            fontSize = 24.sp,
-            color = Color.Black
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        val feedback = when {
-            score>=3 -> "Great job"
-            else -> "better luck next time"
-
-        }
-
-        Text(text= feedback,
-            fontSize = 20.sp,
-            color=Color.Black)
-
-    }
-}
-
-
-
-
-
-
-
-            Box(modifier = Modifier.fillMaxSize()) {
-                Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground1),
-                    contentDescription = null,
-                    contentScale = ContentScale.FillBounds,
-                    modifier = Modifier.fillMaxSize().alpha(0.9f)
-                )
-            }
-
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                color = Color.Transparent
-            )
-            {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Top,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp)
 
                 )
                 {
@@ -219,13 +161,10 @@ if (scorescreen){
                             questioncount++
                             isCorrect=""
                         }
-                    }) {
 
-                        Text(text="next question")
                     }
 
                 }
-
             }
         }
     }
