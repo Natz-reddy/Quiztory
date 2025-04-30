@@ -90,6 +90,18 @@ if (scorescreen){
             color = Color.Black
         )
 
+        Spacer(modifier = Modifier.height(16.dp))
+
+        val feedback = when {
+            score>=3 -> "Great job"
+            else -> "better luck next time"
+
+        }
+
+        Text(text= feedback,
+            fontSize = 20.sp,
+            color=Color.Black)
+
     }
 }
 
