@@ -69,7 +69,7 @@ class MainActivity : ComponentActivity() {
 
 
             Surface(modifier = Modifier.fillMaxSize(),
-                color= Color.Transparent
+                color= Color(0xFFFFB252)
             )
             {
                 Column (
