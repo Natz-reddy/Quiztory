@@ -56,14 +56,6 @@ class MainActivity : ComponentActivity() {
 
             var description by remember { mutableStateOf("") }
 
-            Box( modifier = Modifier.fillMaxSize()){
-                Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground1),
-                    contentDescription = null,
-                    contentScale = ContentScale.FillBounds,
-                    modifier = Modifier.fillMaxSize().alpha(0.9f)
-                )
-            }
 
 
 
@@ -88,7 +80,7 @@ class MainActivity : ComponentActivity() {
                         fontSize = 55.sp,
                         fontWeight = FontWeight.ExtraBold,
                         fontFamily = FontFamily.SansSerif,
-                        color = Color(0xFFE7CC6A),
+                        color = Color(0xFF000000),
                         textAlign = TextAlign.Center
                   )
                   Spacer(modifier = Modifier.height(5.dp))
@@ -101,7 +93,7 @@ class MainActivity : ComponentActivity() {
 
 
 
-                            Text(text = "welcomew to Quiztory",
+                            Text(text = "Welcome To Quiztory",
                                 color = Color(0xFFE7CC6A),
                                 fontSize = 20.sp,
                                 fontFamily = FontFamily.SansSerif,
@@ -135,7 +127,7 @@ class MainActivity : ComponentActivity() {
                         val start = Intent(this@MainActivity, History2::class.java)
                         startActivity(start)},
                         colors = ButtonDefaults.buttonColors(
-                            containerColor =Color(0xFFE7CC6A),
+                            containerColor =Color(0xFF8FD93A),
                             contentColor = Color.White
                         ),
                        modifier = Modifier

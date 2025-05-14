@@ -90,7 +90,7 @@ class History2 : ComponentActivity() {
                             fontSize = 55.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
-                            color = Color(0xFFE7CC6A),
+                            color = Color(0xFF000000),
                             textAlign = TextAlign.Center
                         )
 
@@ -141,7 +141,7 @@ class History2 : ComponentActivity() {
 
                                 },
                                 colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFFE7CC6A),
+                                    containerColor = Color(0xFF070706),
                                     contentColor = Color.White
                                 )
                             ) {
@@ -163,7 +163,7 @@ class History2 : ComponentActivity() {
                                 },
 
                                 colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFFE7CC6A),
+                                    containerColor = Color(0xFF000000),
                                     contentColor = Color.White
                                 )
                             ) {
@@ -198,7 +198,7 @@ class History2 : ComponentActivity() {
                             }
                         }) {
 
-                            Text(text = "next question")
+                            Text(text = "Next Question")
                         }
 
                     }
