@@ -68,12 +68,22 @@ class History2 : ComponentActivity() {
             var scorescreen by remember { mutableStateOf(false) }
             var reviewscreen by remember { mutableStateOf(false) }
 
+Box(
+    modifier = Modifier.fillMaxSize()
+){
+    Image(
+        painter = painterResource(id = R.drawable.ic_launcher_foreground1),
+        contentDescription ="",
+        contentScale = ContentScale.Crop
+    )
+}
+
 
 
 
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color(0xFFFFB252)
+                    color = Color.Transparent
                 )
                 {
                     Column(
@@ -87,10 +97,10 @@ class History2 : ComponentActivity() {
                     {
                         Text(
                             text = " Choose the correct answer ",
-                            fontSize = 55.sp,
+                            fontSize = 65.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
-                            color = Color(0xFF000000),
+                            color = Color(0xFFD59E4D),
                             textAlign = TextAlign.Center
                         )
 
@@ -105,7 +115,7 @@ class History2 : ComponentActivity() {
                                 {
                                     Text(
                                         text = quiz_questions[questioncount],
-                                        fontSize = 20.sp,
+                                        fontSize = 30.sp,
                                         fontWeight = FontWeight.Bold,
                                         textAlign = TextAlign.Center,
                                         color = Color.Black
@@ -115,8 +125,8 @@ class History2 : ComponentActivity() {
 
                             },
                             modifier = Modifier
-                                .width(3500.dp)
-                                .height(150.dp)
+                                .fillMaxWidth()
+                                .height(200.dp)
                                 .padding(horizontal = 10.dp),
                             colors = TextFieldDefaults.colors(
                                 focusedIndicatorColor = Color.White,
