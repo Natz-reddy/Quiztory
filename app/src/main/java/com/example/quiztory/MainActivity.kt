@@ -94,7 +94,7 @@ class MainActivity : ComponentActivity() {
 
 
                             Text(text = "Welcome To Quiztory",
-                                color = Color(0xFFE7CC6A),
+                                color = Color(0xFFEA9610),
                                 fontSize = 20.sp,
                                 fontFamily = FontFamily.SansSerif,
                                 textAlign = TextAlign.Center)

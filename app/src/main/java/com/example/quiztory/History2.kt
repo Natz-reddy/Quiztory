@@ -196,7 +196,11 @@ class History2 : ComponentActivity() {
                                 startActivity(score1)
                                 finish()
                             }
-                        }) {
+                        }, colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF000000),
+                            contentColor = Color.White
+                        )
+                            ) {
 
                             Text(text = "Next Question")
                         }
