@@ -74,17 +74,15 @@ Box(
     Image(
         painter = painterResource(id = R.drawable.ic_launcher_foreground1),
         contentDescription ="",
-        contentScale = ContentScale.Crop
+        contentScale = ContentScale.FillBounds,
+        modifier = Modifier.fillMaxSize()
     )
 }
 
 
-
-
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color.Transparent
-                )
+                    color = Color(0xAAFFB252))
                 {
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
@@ -100,7 +98,7 @@ Box(
                             fontSize = 65.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
-                            color = Color(0xFFD59E4D),
+                            color = Color. Black,
                             textAlign = TextAlign.Center
                         )
 
@@ -129,7 +127,7 @@ Box(
                                 .height(200.dp)
                                 .padding(horizontal = 10.dp),
                             colors = TextFieldDefaults.colors(
-                                focusedIndicatorColor = Color.White,
+                                focusedIndicatorColor = Color. White,
                                 unfocusedIndicatorColor = Color.White
                             )
                         )
@@ -151,7 +149,7 @@ Box(
 
                                 },
                                 colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFF070706),
+                                    containerColor = Color(0xFFB3D983),
                                     contentColor = Color.White
                                 )
                             ) {
@@ -173,7 +171,7 @@ Box(
                                 },
 
                                 colors = ButtonDefaults.buttonColors(
-                                    containerColor = Color(0xFF000000),
+                                    containerColor = Color(0xFFEE827A),
                                     contentColor = Color.White
                                 )
                             ) {
@@ -191,9 +189,9 @@ Box(
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center,
-                            color = if (isCorrect == "Correct") Color.Green
+                            color = if (isCorrect == "Correct") Color(0xFF94CE45)
                             else
-                                Color.Red
+                                Color(0xFFE5473F)
                         )
 
                         Button(onClick = {
@@ -207,7 +205,7 @@ Box(
                                 finish()
                             }
                         }, colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF000000),
+                            containerColor = Color(0xFFFF9800),
                             contentColor = Color.White
                         )
                             ) {

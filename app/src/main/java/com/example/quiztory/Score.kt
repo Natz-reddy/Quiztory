@@ -44,13 +44,13 @@ class Score : ComponentActivity() {
                     painter = painterResource(id = R.drawable.ic_launcher_foreground1),
                     contentDescription = null,
                     contentScale = ContentScale.FillBounds,
-                    modifier = Modifier.fillMaxSize().alpha(0.9f)
+                    modifier = Modifier.fillMaxSize()
                 )
             }
 
             Surface(
                 modifier = Modifier.fillMaxSize(),
-                color = Color(0xFFFFB252)
+                color = Color(0xAAFFB252)
             )
             {
                 Column(
@@ -82,17 +82,6 @@ class Score : ComponentActivity() {
 Spacer(modifier = Modifier.height(30.dp))
 
                     Button(onClick = {
-                        val review = Intent(this@Score,Review::class.java)
-                        review.putExtra("Questions",arrayOf(
-                            "Nelson Mandela was imprisoned for 27 years before becoming South Africa's first Black president",
-                            "The Great Trek was a movement of Afrikaans-speaking settlers...",
-                            "The Soweto Uprising of 1976 was a protest...",
-                            "The Union of South Africa was formed in 1910...",
-                            "The Anglo-Zulu War (1879) ended with a decisive Zulu victory..."
-                        ))
-                        review.putExtra("answers",booleanArrayOf(false, true, true, true, false))
-                        startActivity(review)
-
 
                     }) {
                         Text(text = "review answers")

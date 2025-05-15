@@ -57,11 +57,21 @@ class MainActivity : ComponentActivity() {
             var description by remember { mutableStateOf("") }
 
 
+            Box(
+                modifier = Modifier.fillMaxSize()
+            ){
+                Image(
+                    painter = painterResource(id = R.drawable.ic_launcher_foreground1),
+                    contentDescription ="",
+                    contentScale = ContentScale.FillBounds,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
 
 
 
             Surface(modifier = Modifier.fillMaxSize(),
-                color= Color(0xFFFFB252)
+                color= Color(0x79FFB252)
             )
             {
                 Column (
@@ -76,13 +86,7 @@ class MainActivity : ComponentActivity() {
                 {
                    Spacer(modifier = Modifier.height(90.dp))
 
-                    Text(text = "QUIZTORY",
-                        fontSize = 55.sp,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontFamily = FontFamily.SansSerif,
-                        color = Color(0xFF000000),
-                        textAlign = TextAlign.Center
-                  )
+                    
                   Spacer(modifier = Modifier.height(5.dp))
 
                     OutlinedTextField(value = "", onValueChange ={ },
