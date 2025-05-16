@@ -208,6 +208,7 @@ Box(
                                 score1.putExtra("total", quiz_questions.size)
                                 score1.putExtra("questions", quiz_questions)
                                 score1.putExtra("userAnswers", userAnswers.toBooleanArray())
+                                score1.putExtra("correctAnswers", answers)
                                 startActivity(score1)
                                 finish()
                             }
