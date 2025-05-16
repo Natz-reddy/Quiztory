@@ -86,7 +86,7 @@ class Score : ComponentActivity() {
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    Text("You scored $score out of 5  ",
+                    Text("You scored $score out of $total  ",
                         fontSize = 20.sp )
 
                     Spacer(modifier = Modifier.height(10.dp))
