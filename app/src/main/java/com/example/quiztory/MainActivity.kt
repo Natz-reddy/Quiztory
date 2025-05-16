@@ -56,10 +56,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
-            var description by remember { mutableStateOf("") }
-            var instructions by remember { mutableStateOf(false) }
+            var description by remember { mutableStateOf("") }//stores the app description
+            var instructions by remember { mutableStateOf(false) }//stores the instructions description
 
-
+// the background image
             Box(
                 modifier = Modifier.fillMaxSize()
             ){
@@ -67,18 +67,18 @@ class MainActivity : ComponentActivity() {
                     painter = painterResource(id = R.drawable.ic_launcher_foreground1),
                     contentDescription ="",
                     contentScale = ContentScale.FillBounds,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.fillMaxSize()//fills the whole screen
                 )
             }
 
 
 
             Surface(modifier = Modifier.fillMaxSize(),
-                color= Color(0x79FFB252)
+                color= Color(0x79FFB252)//a semi transparent colour to go over the image
             )
             {
-                Column (
-                    horizontalAlignment = Alignment.CenterHorizontally,
+                Column (//main layout
+                    horizontalAlignment = Alignment.CenterHorizontally,//everything becomes centered
                     verticalArrangement = Arrangement.SpaceBetween,
                     modifier = Modifier
                         .fillMaxSize()
@@ -87,13 +87,12 @@ class MainActivity : ComponentActivity() {
                 )
 
                 {
-                   Spacer(modifier = Modifier.height(220.dp))
+                   Spacer(modifier = Modifier.height(220.dp))//adds spacing between functions
 
                     
-                  Spacer(modifier = Modifier.height(5.dp))
 
-                    OutlinedTextField(value = "", onValueChange ={ },
-                        enabled = false,
+                    OutlinedTextField(value = "", onValueChange ={ },//textfield to hold the description
+                        enabled = false,//user cant change the description
                         placeholder = {
                             Column(horizontalAlignment = Alignment.CenterHorizontally)
                             {
@@ -130,8 +129,8 @@ class MainActivity : ComponentActivity() {
 
                     Spacer(modifier = Modifier.height(30.dp))
 
-                    Button(onClick = {
-                        val start = Intent(this@MainActivity, History2::class.java)
+                    Button(onClick = {//start button to begin the quiz
+                        val start = Intent(this@MainActivity, History2::class.java)//create an Intent to navigate from MainActivity to History2 activity and start it
                         startActivity(start)},
                         colors = ButtonDefaults.buttonColors(
                             containerColor =Color(0xFF8FD93A),
@@ -153,14 +152,14 @@ class MainActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.height(15.dp))
 
                     Button(onClick =
-                        { instructions= !instructions},
+                        { instructions= !instructions},//toggles the visibility of the instructions text when the Help button is clicked
                         colors = ButtonDefaults.buttonColors(
                         containerColor =Color(0xFF5DA7AD),
                         contentColor = Color.White
-                    ),modifier= Modifier.width(80.dp).align(Alignment.End)
+                    ),modifier= Modifier.width(80.dp).align(Alignment.End)//aligns the button to the end of the column
 
                         ){
-                        Text(text = if (instructions)" Close " else "Help? ",
+                        Text(text = if (instructions)" Close " else "Help? ",//if the button is clicked close will show else help? will show
                             fontSize = 8.sp,
                             fontWeight = FontWeight.W900,
                             fontFamily = FontFamily.Serif

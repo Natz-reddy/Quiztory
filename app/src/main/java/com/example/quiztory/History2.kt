@@ -48,7 +48,7 @@ class History2 : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-
+//array that stores the questions
             val quiz_questions = arrayOf(
                 "Nelson Mandela was imprisoned for 27 years before becoming South Africa's first Black president",
                 "The Great Trek was a movement of Afrikaans-speaking settlers into the interior of South Africa to escape British rule in the 1830s.",
@@ -58,18 +58,18 @@ class History2 : ComponentActivity() {
 
             )
 
-            val answers = booleanArrayOf(
+            val answers = booleanArrayOf(//array that stores the answer
                 false, true, true, true, false, true
             )
-val userAnswers = mutableListOf< Boolean>()
+val userAnswers = mutableListOf< Boolean>()//list that tracks the users answers
 
-            var questioncount by remember { mutableStateOf(0) }
-            var isCorrect by remember { mutableStateOf("") }
-            var score by remember { mutableStateOf(0) }
-            var scorescreen by remember { mutableStateOf(false) }
-            var reviewscreen by remember { mutableStateOf(false) }
+            var questioncount by remember { mutableStateOf(0) }//current index question
+            var isCorrect by remember { mutableStateOf("") }//tracks if the user got the current question correct
+            var score by remember { mutableStateOf(0) }// keeps tracks of the users score
+            //var scorescreen by remember { mutableStateOf(false) }
+            //var reviewscreen by remember { mutableStateOf(false) }
 
-
+//background image
 Box(
     modifier = Modifier.fillMaxSize()
 ){
@@ -107,14 +107,14 @@ Box(
                         Spacer(modifier = Modifier.height(60.dp))
 
 
-                        OutlinedTextField(
+                        OutlinedTextField(//textfield to store the questions
                             value = "", onValueChange = {},
-                            enabled = false,
+                            enabled = false,//user cant change the question
                             placeholder = {
                                 Column(horizontalAlignment = Alignment.CenterHorizontally)
                                 {
                                     Text(
-                                        text = quiz_questions[questioncount],
+                                        text = quiz_questions[questioncount],//shows the questions and counts each one until it reaches 5
                                         fontSize = 30.sp,
                                         fontWeight = FontWeight.Bold,
                                         textAlign = TextAlign.Center,
@@ -141,10 +141,10 @@ Box(
                         Row {
                             Button(
                                 onClick = {
-                                    userAnswers.add(true)
+                                    userAnswers.add(true)// if the answers are true then it is correct else it is false
                                     if (answers[questioncount]) {
                                         isCorrect = "Correct"
-                                        score++
+                                        score++//the score gets added
                                     } else {
                                         isCorrect = "Incorrect"
                                     }
@@ -163,10 +163,10 @@ Box(
 
                             Button(
                                 onClick = {
-                                    userAnswers.add(false)
+                                    userAnswers.add(false)//if it is false it displays incorrect
                                     if (!answers[questioncount]) {
                                         isCorrect = "Correct"
-                                        score++
+                                        score++//score gets added
                                     } else {
 
                                         isCorrect = "Incorrect"
@@ -188,29 +188,29 @@ Box(
                         Spacer(modifier = Modifier.height(15.dp))
 
                         Text(
-                            text = isCorrect,
+                            text = isCorrect,//shows the result for the current answer
                             fontSize = 30.sp,
                             fontWeight = FontWeight.ExtraBold,
                             fontFamily = FontFamily.SansSerif,
                             textAlign = TextAlign.Center,
-                            color = if (isCorrect == "Correct") Color(0xFF94CE45)
+                            color = if (isCorrect == "Correct") Color(0xFF94CE45) // if the answer equals the correct answer then it is corect and wil change to color green else it will be red
                             else
                                 Color(0xFFE5473F)
                         )
 
                         Button(onClick = {
-                            if (questioncount < quiz_questions.size - 1) {
-                                questioncount++
+                            if (questioncount < quiz_questions.size - 1) {//moves to the next question
+                                questioncount++//adds to the index count
                                 isCorrect = ""
                             } else {
-                                val score1 = Intent(this@History2, Score::class.java)
+                                val score1 = Intent(this@History2, Score::class.java)//values to go to score screen
                                 score1.putExtra("score", score)
                                 score1.putExtra("total", quiz_questions.size)
                                 score1.putExtra("questions", quiz_questions)
                                 score1.putExtra("userAnswers", userAnswers.toBooleanArray())
                                 score1.putExtra("correctAnswers", answers)
-                                startActivity(score1)
-                                finish()
+                                startActivity(score1)// navigates to the score screen
+                                finish()//closes the current activity
                             }
                         }, colors = ButtonDefaults.buttonColors(
                             containerColor = Color(0xFFFF9800),

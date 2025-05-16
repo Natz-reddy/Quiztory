@@ -50,15 +50,15 @@ class Score : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-
-            val score = intent.getIntExtra("score", 0)
+//retrieves data passed from the other screens
+            val score = intent.getIntExtra("score", 0)//score = 0
             val total = intent.getIntExtra("total", 5)
             val answers = intent.getBooleanArrayExtra("answers")?: BooleanArray(0)
             val questions = intent.getStringArrayExtra("questions")?: arrayOf()
             val userAnswers = intent.getBooleanArrayExtra("userAnswers")?: booleanArrayOf()
             val correctAnswers = intent.getBooleanArrayExtra("correctAnswers") ?: booleanArrayOf()
-            var showAnswers by remember { mutableStateOf(false) }
-            var instructions by remember { mutableStateOf(false) }
+            var showAnswers by remember { mutableStateOf(false) }//toggles the review section
+            var instructions by remember { mutableStateOf(false) }//toggles the help / instructions text
 
             Box(modifier = Modifier.fillMaxSize()) {
                 Image(
@@ -92,21 +92,21 @@ class Score : ComponentActivity() {
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Text(
-                        "You scored $score out of $total  ",
+                        "You scored $score out of $total  ",//displays the score count out of the total amount of questions
                         fontSize = 25.sp
                     )
 
                     Spacer(modifier = Modifier.height(10.dp))
 
                     Text(
-                        text = if (score >= 3) "Great job " else
+                        text = if (score >= 3) "Great job " else//if the score is less than 3 is greta job else keep trying
                             "Keep practicing",
                         fontSize = 30.sp,
-                        color = if (score >= 3) Color(0xFF7DB927) else Color(0xFFF33424)
+                        color = if (score >= 3) Color(0xFF7DB927) else Color(0xFFF33424)//green is for great job else red is fro keep trying
                     )
 
                     Spacer(modifier = Modifier.height(24.dp))
-
+//review answers button
                     Button(
                         onClick = {
                             showAnswers = !showAnswers
@@ -118,11 +118,12 @@ class Score : ComponentActivity() {
                         )
 
                     ) {
-                        Text(text = if (showAnswers) " Hide answers" else " Review answers")
+                        Text(text = if (showAnswers) " Hide answers" else " Review answers")//if not clicked hide else show the answers and questions
                     }
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    if (showAnswers) {
+
+                    if (showAnswers) {//show user's answers with question review if toggled on
                         Column(
                             modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
                         ) {
@@ -130,19 +131,19 @@ class Score : ComponentActivity() {
 
 
                                 Text(
-                                    text = questions[i],
+                                    text = questions[i],//displays questions while keeping a count
                                     fontSize = 16.sp
                                 )
                                 Spacer(modifier = Modifier.height(4.dp))
 
                                 val userAns =
-                                    if (userAnswers.getOrNull(i) == true) "True" else "False"
+                                    if (userAnswers.getOrNull(i) == true) "True" else "False"//displays users answer and if correct or not
                                 val isCorrect =
                                     userAnswers.getOrNull(i) == correctAnswers.getOrNull(i)
 
                                 Text(
-                                    text = "Your answer: $userAns",
-                                    color = if (isCorrect) Color.Green else Color.Red,
+                                    text = "Your answer: $userAns",//your answer and rhe variable that stores the answer
+                                    color = if (isCorrect) Color.Green else Color.Red,//changes color depending on answer
                                     fontSize = 16.sp
                                 )
 
@@ -157,7 +158,7 @@ class Score : ComponentActivity() {
 
                     Button(
                         onClick = {
-                            val playagain = Intent(this@Score, History2::class.java)
+                            val playagain = Intent(this@Score, History2::class.java)//varaible to play again
                             startActivity(playagain)
                             finish()
                         },
@@ -187,7 +188,7 @@ class Score : ComponentActivity() {
 
                         Button(
                             onClick =
-                                { instructions = !instructions },
+                                { instructions = !instructions },//stores the instructtions
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = Color(0xFF5DA7AD),
                                 contentColor = Color.White
