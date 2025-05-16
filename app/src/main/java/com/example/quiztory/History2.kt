@@ -206,6 +206,8 @@ Box(
                                 val score1 = Intent(this@History2, Score::class.java)
                                 score1.putExtra("score", score)
                                 score1.putExtra("total", quiz_questions.size)
+                                score1.putExtra("questions", quiz_questions)
+                                score1.putExtra("userAnswers", userAnswers.toBooleanArray())
                                 startActivity(score1)
                                 finish()
                             }
