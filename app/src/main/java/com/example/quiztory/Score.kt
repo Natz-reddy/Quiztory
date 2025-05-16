@@ -94,7 +94,7 @@ class Score : ComponentActivity() {
                     Text(
                         text = if (score>=3)"Great job " else
                         "keep practicing",
-                        fontSize = 20.sp,
+                        fontSize = 18.sp,
                         color = if (score >= 3) Color.Green else Color.Red
                     )
 
