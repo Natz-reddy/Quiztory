@@ -97,15 +97,21 @@ Spacer(modifier = Modifier.height(30.dp))
                         showAnswers = !showAnswers
 
                     }) {
-                        Text(text = if (showAnswers)"hide answers" else "review answers")
+                        Text(text = if (showAnswers)" Hide answers" else " Review answers")
                     }
                     Spacer(modifier = Modifier.height(16.dp))
                     Row(
                         modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        if (showAnswers) {
 
-                        }
+                    if (showAnswers){
+                        Text(text = "Nelson mandela")
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(text = "False")
+
+                    }
+
+
                     }
 
                     Spacer(modifier = Modifier.height(24.dp))
