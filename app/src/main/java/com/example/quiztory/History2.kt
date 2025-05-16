@@ -61,12 +61,14 @@ class History2 : ComponentActivity() {
             val answers = booleanArrayOf(
                 false, true, true, true, false, true
             )
+val userAnswers = mutableListOf< Boolean>()
 
             var questioncount by remember { mutableStateOf(0) }
             var isCorrect by remember { mutableStateOf("") }
             var score by remember { mutableStateOf(0) }
             var scorescreen by remember { mutableStateOf(false) }
             var reviewscreen by remember { mutableStateOf(false) }
+
 
 Box(
     modifier = Modifier.fillMaxSize()
@@ -139,6 +141,7 @@ Box(
                         Row {
                             Button(
                                 onClick = {
+                                    userAnswers.add(true)
                                     if (answers[questioncount]) {
                                         isCorrect = "Correct"
                                         score++
@@ -160,6 +163,7 @@ Box(
 
                             Button(
                                 onClick = {
+                                    userAnswers.add(false)
                                     if (!answers[questioncount]) {
                                         isCorrect = "Correct"
                                         score++
