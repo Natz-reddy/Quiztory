@@ -150,7 +150,24 @@ class MainActivity : ComponentActivity() {
                             fontFamily = FontFamily.Serif
                         )
                     }
-                    Spacer(modifier = Modifier.height(35.dp))
+                    Spacer(modifier = Modifier.height(15.dp))
+
+                    Button(onClick =
+                        { instructions= !instructions},
+                        colors = ButtonDefaults.buttonColors(
+                        containerColor =Color(0xFF5DA7AD),
+                        contentColor = Color.White
+                    ),modifier= Modifier.width(80.dp).align(Alignment.End)
+
+                        ){
+                        Text(text = if (instructions)" Close " else "Help? ",
+                            fontSize = 8.sp,
+                            fontWeight = FontWeight.W900,
+                            fontFamily = FontFamily.Serif
+                        )
+
+                    }
+
                 }
 
             }
