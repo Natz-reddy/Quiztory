@@ -49,7 +49,9 @@ class Score : ComponentActivity() {
             val score = intent.getIntExtra("score", 0)
             val total = intent.getIntExtra("total", 5)
             val answers = intent.getBooleanArrayExtra("answers")?: BooleanArray(0)
+            val questions = intent.getStringArrayExtra("questions")?: arrayOf()
             var showAnswers by remember { mutableStateOf(false) }
+
 
             Box(modifier = Modifier.fillMaxSize()) {
                 Image(
