@@ -114,8 +114,22 @@ Spacer(modifier = Modifier.height(24.dp))
                         ){
                             for (i in questions.indices){
 
-                    }
 
+                                      Text(text= questions[i],
+                                          fontSize = 16.sp)
+                                      Spacer(modifier= Modifier.height(4.dp))
+
+                                      val userAns = if (userAnswers.getOrNull(i) == true) "True" else "False"
+                                      val isCorrect = userAnswers.getOrNull(i) == correctAnswers.getOrNull(i)
+
+                                      Text(
+                                          text = "Your answer: $userAns",
+                                          color = if (isCorrect) Color.Green else Color.Red,
+                                          fontSize = 14.sp
+                                      )
+
+
+                            }
 
                     }
 
