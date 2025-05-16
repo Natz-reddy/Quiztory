@@ -50,6 +50,8 @@ class Score : ComponentActivity() {
             val total = intent.getIntExtra("total", 5)
             val answers = intent.getBooleanArrayExtra("answers")?: BooleanArray(0)
             val questions = intent.getStringArrayExtra("questions")?: arrayOf()
+            val userAnswers = intent.getBooleanArrayExtra("userAnswers")?: booleanArrayOf()
+            val correctAnswers = intent.getBooleanArrayExtra("correctAnswers") ?: booleanArrayOf()
             var showAnswers by remember { mutableStateOf(false) }
 
 
