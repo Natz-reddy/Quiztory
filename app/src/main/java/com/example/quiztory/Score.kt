@@ -98,7 +98,7 @@ class Score : ComponentActivity() {
                         color = if (score >= 3) Color.Green else Color.Red
                     )
 
-Spacer(modifier = Modifier.height(30.dp))
+Spacer(modifier = Modifier.height(24.dp))
 
                     Button(onClick = {
                         showAnswers = !showAnswers
