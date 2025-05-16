@@ -87,7 +87,7 @@ class MainActivity : ComponentActivity() {
                 )
 
                 {
-                   Spacer(modifier = Modifier.height(90.dp))
+                   Spacer(modifier = Modifier.height(220.dp))
 
                     
                   Spacer(modifier = Modifier.height(5.dp))
@@ -109,7 +109,7 @@ class MainActivity : ComponentActivity() {
                             Spacer(modifier = Modifier.height(4.dp))
 
                             Text(text = " Put your knowledge to the test. Answer five history questions , " +
-                                    "True/ False about the world history events and figures",
+                                    "True/ False about South African History events and figures",
                                 color = Color.DarkGray,
                                 fontSize = 20.sp,
                                 fontFamily = FontFamily.SansSerif,
@@ -128,7 +128,7 @@ class MainActivity : ComponentActivity() {
 
 
 
-                    Spacer(modifier = Modifier.height(50.dp))
+                    Spacer(modifier = Modifier.height(30.dp))
 
                     Button(onClick = {
                         val start = Intent(this@MainActivity, History2::class.java)
