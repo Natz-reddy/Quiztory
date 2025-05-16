@@ -109,9 +109,10 @@ Spacer(modifier = Modifier.height(24.dp))
                     Spacer(modifier = Modifier.height(16.dp))
 
                     if (showAnswers){
-                        Text(text = "Nelson mandela")
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(text = "False")
+                        Column (
+                            modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)
+                        ){
+                            for (i in questions.indices){
 
                     }
 
