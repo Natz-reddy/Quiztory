@@ -168,6 +168,15 @@ class MainActivity : ComponentActivity() {
 
                     }
 
+                    if (instructions){
+                        Text(text= "Welcome to Quiztory. " +
+                                "How it works?   " +
+                                "Begin the flashcrad app by pressing start.  " +
+                                "5 true/false questions will appear , answer it by simply pressing whether the statement is true or false.  " +
+                                "Press next question when you are done with the previous.   " +
+                                "Once you have completed the quiz it will take you to the score screen where you are able to view your score out of 5, you can review , play again,or exit")
+                    }
+                    }
                 }
 
             }
