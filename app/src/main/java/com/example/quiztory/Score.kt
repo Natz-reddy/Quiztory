@@ -84,7 +84,7 @@ class Score : ComponentActivity() {
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold)
 
-                    Spacer(modifier = Modifier.height(20.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
 
                     Text("You scored $score out of 5  ",
                         fontSize = 20.sp )
