@@ -158,7 +158,7 @@ class Score : ComponentActivity() {
 
                     Button(
                         onClick = {
-                            val playagain = Intent(this@Score, History2::class.java)//varaible to play again
+                            val playagain = Intent(this@Score, History2::class.java)//variable to play again
                             startActivity(playagain)
                             finish()
                         },

@@ -65,7 +65,7 @@ val userAnswers = mutableListOf< Boolean>()//list that tracks the users answers
 
             var questioncount by remember { mutableStateOf(0) }//current index question
             var isCorrect by remember { mutableStateOf("") }//tracks if the user got the current question correct
-            var score by remember { mutableStateOf(0) }// keeps tracks of the users score
+            var score by remember { mutableStateOf(0) }// keeps tracks of the users score // score =  0
             //var scorescreen by remember { mutableStateOf(false) }
             //var reviewscreen by remember { mutableStateOf(false) }
 
@@ -84,7 +84,7 @@ Box(
 
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color(0xAAFFB252))
+                    color = Color(0xAAFFB252))// semi transparent
                 {
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
