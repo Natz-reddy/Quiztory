@@ -16,6 +16,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -75,6 +77,7 @@ class Score : ComponentActivity() {
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp)
+                        .verticalScroll(rememberScrollState())
                 ){
 
                     Text(text= "Quiz Completed",
@@ -118,6 +121,7 @@ Spacer(modifier = Modifier.height(30.dp))
 
                     }
 
+                    }
                     Spacer(modifier = Modifier.height(24.dp))
 
                     Button(onClick = {
@@ -139,7 +143,12 @@ Spacer(modifier = Modifier.height(30.dp))
                 }
 
 
+
+
+                }
+
+
             }
         }
     }
-}
+
